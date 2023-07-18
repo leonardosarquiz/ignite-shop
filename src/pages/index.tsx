@@ -19,9 +19,10 @@ interface HomeProps {
 
 
 export default function Home({products}: HomeProps) {
+  
 const [sliderRef] = useKeenSlider({
   slides: {
-    perView: 3,
+    perView: "auto" ,
     spacing: 48,
   }
 })
@@ -30,7 +31,7 @@ const [sliderRef] = useKeenSlider({
   return (
   <>
      <Head>
-    <title>Ignite Shop</title>
+    <title>Home | Ignite Shop</title>
    </Head>
 
 
@@ -39,7 +40,7 @@ const [sliderRef] = useKeenSlider({
     {products.map(product => {
       return (
         <Link href={`/product/${product.id}`} key={product.id} prefetch={false}>
-          <Product  className='keen-slider__slide'>
+          <Product  className='keen-slider__slide' >
               <Image src={product.imageUrl} alt='' width={520} height={480}/>
 
               <footer>
