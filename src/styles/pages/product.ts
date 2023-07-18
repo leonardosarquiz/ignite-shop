@@ -9,7 +9,7 @@ alignItems: 'stretch',
 maxWidth: 1180,
 margin: '0 auto',
 
-'@media (max-width: 768px)': {
+'@media (max-width: 460px)': {
   gridTemplateColumns: '1fr',
   gap: '2rem',
   padding: '3rem',
